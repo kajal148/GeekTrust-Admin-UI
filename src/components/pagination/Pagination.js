@@ -23,17 +23,17 @@ const Pagination = ({adminsPerPage, totalAdmins, paginate, currentPage, filtered
         <nav className='mt-2'>
             <ul className='pagination'>
             <li className={`page-item ${ currentPage > 1 ? "" : "disabled"}`}>
-                <a className="page-link" href="!#" tabIndex="-1" onClick={(e) => paginate(currentPage-1)}>Previous</a>
+                <div className="page-link" href="!#" tabIndex="-1" onClick={(e) => paginate(currentPage-1)}>Previous</div>
             </li>
                 {pageNumbers.map((pageNumber) => {
                     return <li key={pageNumber} className="page-item">
-                        <a href='!#' className='page-link' onClick={(e) => paginate(pageNumber)}>
+                        <div className='page-link' onClick={(e) => paginate(pageNumber)}>
                             {pageNumber}
-                        </a>
+                        </div>
                     </li>
                 })}
             <li className={`page-item ${ currentPage < total ? "" : "disabled"}`}>
-                <a className="page-link" href="!#" onClick={(e) => paginate(currentPage+1)}>Next</a>
+                <div className="page-link" href="!#" onClick={(e) => paginate(currentPage+1)}>Next</div>
             </li>
             </ul>
         </nav>
