@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background: #a494ce;
+}
+
+*:focus{
+    outline-style: none !important;
+    box-shadow: none !important;
+    border-color: none !important;
+}
+
+button > * {
+    pointer-events: none;
+}
+
+.container{
+    padding: 1rem 0rem;
+}
+
+h1 {
+    margin: 1.5rem 0rem;
+    color: white;
+}
+
+.top-section{
+    flex-direction: row;
+}
+
+.custom-table{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 2rem 2rem 1rem 2rem;
+    box-shadow: 1px 1px 4px rgba(131, 131, 131, 0.3);
+}
+
+.table td, .table th{
+    vertical-align: middle;
+}
+
+.row-select{
+    width: 15px;
+    height: 15px;
+    background-color: #eee;
+}
+
+
+.pagination{
+    justify-content: center;
+}
+
+.pagination li a{
+    background: white;
+    color: #0d6efd;
+    border: none !important;
+}
+
+.btn{
+    border: none !important;
+}
+
+.action-icon{
+    color: white;
+}
+
+.action-icon:hover, .action-icon:active{
+    color: white !important;
+}
+
+.modal{
+    display: none;
+    z-index: 100;
+    background-color:  rgba(221, 221, 221, 0.3);
+    /* position: relative; */
+}
+
+.modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: auto;
+    box-shadow: 2px 2px 4px rgba(131, 131, 131, 0.3);
+    border: 1px solid rgba(131, 131, 131, 0.25);
+}
+
+.modal-dialog h5{
+    color: #7f53ac;
+    font-weight: bold;
+}
+
+.modal-dialog label{
+    color: #657ced;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* media queries */
+
+@media (max-width: 700px) { 
+    .top-section{
+        flex-direction: column;
+    }
+
+    .btns-right{
+        margin-top: 5px;
+        max-width: 200px;
+    }
+
+}
